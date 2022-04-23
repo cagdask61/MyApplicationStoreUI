@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApplicationComponent } from './application.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -9,7 +10,10 @@ import { ApplicationComponent } from './application.component';
     ApplicationComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([
+      {path:'app',component:ApplicationComponent}
+    ])
   ]
 })
 export class ApplicationModule { }

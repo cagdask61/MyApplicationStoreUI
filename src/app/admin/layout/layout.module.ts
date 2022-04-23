@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { LayoutComponentsModule } from './layout-components/layout-components.module';
 import { LayoutComponent } from './layout.component';
 
@@ -9,7 +10,8 @@ import { LayoutComponent } from './layout.component';
     LayoutComponent
   ],
   imports: [
-    LayoutComponentsModule
+    LayoutComponentsModule,
+    RouterModule
   ],
   exports:[
     LayoutComponent

@@ -5,6 +5,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
 import { UserAddComponent } from './user-add/user-add.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,13 @@ import { UserAddComponent } from './user-add/user-add.component';
     UserAddComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([
+      {path:'add',component:UserAddComponent},
+      {path:'detail/:id',component:UserDetailComponent},
+      {path:'update/:id',component:UserUpdateComponent},
+      {path:'list',component:UserListComponent}
+    ])
   ]
 })
 export class UserModule { }

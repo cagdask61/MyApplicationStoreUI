@@ -5,6 +5,7 @@ import { CategoryDetailComponent } from './category-detail/category-detail.compo
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CategoryAddComponent } from './category-add/category-add.component';
 import { CategoryUpdateComponent } from './category-update/category-update.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,6 +18,12 @@ import { CategoryUpdateComponent } from './category-update/category-update.compo
     CategoryUpdateComponent
   ],
   imports: [
+    RouterModule.forChild([
+    {path:'add',component:CategoryAddComponent},
+    {path:'detail/:id',component:CategoryDetailComponent},
+    {path:'update/:id',component:CategoryUpdateComponent},
+    {path:'list',component:CategoryListComponent}
+  ])
   ]
 })
 export class CategoryModule { }

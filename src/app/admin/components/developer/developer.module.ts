@@ -5,6 +5,7 @@ import { DeveloperUpdateComponent } from './developer-update/developer-update.co
 import { DeveloperListComponent } from './developer-list/developer-list.component';
 import { DeveloperAddComponent } from './developer-add/developer-add.component';
 import { DeveloperDetailComponent } from './developer-detail/developer-detail.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,13 @@ import { DeveloperDetailComponent } from './developer-detail/developer-detail.co
     DeveloperDetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([
+      {path:'add',component:DeveloperAddComponent},
+      {path:'detail/:id',component:DeveloperDetailComponent},
+      {path:'update/:id',component:DeveloperUpdateComponent},
+      {path:'list',component:DeveloperListComponent}
+    ])
   ]
 })
 export class DeveloperModule { }
