@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicationListComponent implements OnInit {
 
+  data=[
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laboriosam mollitia vitae, accusamus excepturi est ipsa magnam eveniet libero amet expedita fugit dolorum rem ea, modi provident! Quo, porro aut?',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laboriosam mollitia vitae, accusamus excepturi est ipsa magnam eveniet libero amet expedita fugit dolorum rem ea, modi provident! Quo, porro aut?',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laboriosam mollitia vitae, accusamus excepturi est ipsa magnam eveniet libero amet expedita fugit dolorum rem ea, modi provident! Quo, porro aut?',
+   
+  ]
   constructor() { }
 
   ngOnInit(): void {

@@ -7,7 +7,12 @@ import { ApplicationUpdateComponent } from './application-update/application-upd
 import { ApplicationDetailComponent } from './application-detail/application-detail.component';
 import { RouterModule } from '@angular/router';
 
-
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { FormsModule } from '@angular/forms';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 @NgModule({
   declarations: [
@@ -19,19 +24,27 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild([
       {path:'add',component:ApplicationAddComponent},
       {path:'detail/:id',component:ApplicationDetailComponent},
       {path:'update/:id',component:ApplicationUpdateComponent},
       {path:'list',component:ApplicationListComponent}
-    ])
+    ]),
+    NzCardModule,
+    NzAvatarModule,
+    NzIconModule,
+    NzGridModule,
+    NzDividerModule
   ],
   exports:[    
     ApplicationComponent,
     ApplicationListComponent,
     ApplicationAddComponent,
     ApplicationUpdateComponent,
-    ApplicationDetailComponent
-  ]
+    ApplicationDetailComponent,
+    
+  ],
+  providers:[]
 })
 export class ApplicationModule { }

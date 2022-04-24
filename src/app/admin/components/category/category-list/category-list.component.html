@@ -1,1 +1,8 @@
-<p>category-list works!</p>
+
+  <nz-divider nzOrientation="center" nzText="Categories" class="fs-2"></nz-divider>
+<nz-list nzBordered nzSize="large">
+    <nz-list-item *ngFor="let item of data">
+        {{item}}
+    </nz-list-item>
+    <nz-list-footer>Footer</nz-list-footer>
+  </nz-list>

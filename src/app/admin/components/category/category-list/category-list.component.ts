@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryListComponent implements OnInit {
 
+  data = [
+    'Müzik ve Ses',
+    'Alışveriş',
+    'Sosyal Medya'
+  ]
   constructor() { }
 
   ngOnInit(): void {

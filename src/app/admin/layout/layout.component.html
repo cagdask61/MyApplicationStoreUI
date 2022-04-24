@@ -1,3 +1,127 @@
-<app-navigation></app-navigation>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<nz-layout class="app-layout">
+    <nz-sider class="menu-sidebar"
+              nzCollapsible
+              nzWidth="256px"
+              nzBreakpoint="md"
+              [(nzCollapsed)]="isCollapsed"
+              [nzTrigger]="null">
+      <div class="sidebar-logo">
+        <a href="/admin">
+          <i nz-icon nzType="dashboard" nzTheme="twotone" style="font-size: xx-large;"></i>
+          <h1>My Application Store Panel</h1>
+        </a>
+      </div>
+      <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+
+        <li nz-submenu nzTitle="Application" nzIcon="appstore">
+          <ul>
+
+            <li nz-menu-item>
+              <a routerLink="application/list">List</a>
+            </li>
+
+            <li nz-menu-item>
+              <a routerLink="application/pure-list">Pure List</a>
+            </li>
+
+            <li nz-menu-item>
+              <a routerLink="application/add">Add</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li nz-submenu nzTitle="Category" nzIcon="group">
+          <ul>
+            
+            <li nz-menu-item>
+              <a routerLink="category/list">List</a>
+            </li>
+
+            <li nz-menu-item>
+              <a routerLink="category/add">Add</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li nz-submenu nzTitle="User" nzIcon="user">
+          <ul>
+            
+            <li nz-menu-item>
+              <a routerLink="user/list">List</a>
+            </li>
+
+            <li nz-menu-item>
+              <a routerLink="user/add">Add</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li nz-submenu nzTitle="Developer" nzIcon="user-switch">
+          <ul>
+            
+            <li nz-menu-item>
+              <a routerLink="developer/list">List</a>
+            </li>
+
+            <li nz-menu-item>
+              <a routerLink="developer/pure-list">Pure List</a>
+            </li>
+
+            <li nz-menu-item>
+              <a routerLink="developer/add">Add</a>
+            </li>
+            
+          </ul>
+        </li>
+
+        <li nz-submenu nzTitle="Operation Claim" nzIcon="partition">
+          <ul>
+            <li nz-menu-item>
+              <a routerLink="operation-claim/list">List</a>
+            </li>
+
+            <li nz-menu-item>
+              <a routerLink="operation-claim/add">Add</a>
+            </li>
+          </ul>
+        </li>
+
+        <li nz-submenu nzTitle="User Operation Claim" nzIcon="solution">
+          <ul>
+            <li nz-menu-item>
+              <a routerLink="user-operation-claim/list">List</a>
+            </li>
+
+            <li nz-menu-item>
+              <a routerLink="user-operation-claim/pure-list">Pure List</a>
+            </li>
+
+            <li nz-menu-item>
+              <a routerLink="user-operation-claim/add">Add</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout>
+      <nz-header>
+        <div class="app-header">
+          <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+              <i class="trigger"
+                 nz-icon
+                 [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+              ></i>
+          </span>
+        </div>
+      </nz-header>
+      <nz-content>
+        <div class="inner-content">
+          <router-outlet></router-outlet>
+        </div>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+  

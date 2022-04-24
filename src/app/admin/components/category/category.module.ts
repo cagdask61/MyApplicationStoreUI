@@ -7,7 +7,8 @@ import { CategoryAddComponent } from './category-add/category-add.component';
 import { CategoryUpdateComponent } from './category-update/category-update.component';
 import { RouterModule } from '@angular/router';
 
-
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,22 @@ import { RouterModule } from '@angular/router';
     CategoryUpdateComponent
   ],
   imports: [
+    CommonModule,
     RouterModule.forChild([
     {path:'add',component:CategoryAddComponent},
     {path:'detail/:id',component:CategoryDetailComponent},
     {path:'update/:id',component:CategoryUpdateComponent},
     {path:'list',component:CategoryListComponent}
-  ])
+    ]),
+    NzListModule,    
+    NzDividerModule
+  ],
+  exports:[
+    CategoryComponent,
+    CategoryDetailComponent,
+    CategoryListComponent,
+    CategoryAddComponent,
+    CategoryUpdateComponent
   ]
 })
 export class CategoryModule { }
