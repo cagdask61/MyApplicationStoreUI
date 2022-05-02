@@ -3,6 +3,10 @@
 <nz-list nzBordered nzSize="large">
     <nz-list-item *ngFor="let item of data">
         {{item}}
+        <div class="d-flex justify-content-end">
+          <button nz-button nzType="text" class="text-info">Detail</button>
+          <button nz-button nzType="text" class="text-warning">Update</button>
+          <button nz-button nzType="text" nzDanger>Delete</button>
+        </div>
     </nz-list-item>
-    <nz-list-footer>Footer</nz-list-footer>
   </nz-list>

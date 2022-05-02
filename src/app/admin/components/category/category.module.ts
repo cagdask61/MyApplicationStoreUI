@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
     {path:'list',component:CategoryListComponent}
     ]),
     NzListModule,    
-    NzDividerModule
+    NzDividerModule,
+    NzButtonModule
+
   ],
   exports:[
     CategoryComponent,

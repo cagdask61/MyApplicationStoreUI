@@ -1,33 +1,42 @@
 
 
   <nz-divider nzOrientation="center" nzText="Applications" class="fs-2"></nz-divider>
-  <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+  <!-- <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
     <div nz-col class="gutter-row" [nzSpan]="6" *ngFor="let item of data">
       <div class="inner-box">
-        <nz-card style="width:300px;" [nzCover]="coverTemplate" [nzActions]="[actionSetting, actionEdit, actionEllipsis]" >
-          <nz-card-meta
-            nzTitle="card title"
-            nzDescription="{{item}}"
-            [nzAvatar]="avatarTemplate"
-          ></nz-card-meta>  
-          <ng-template #avatarTemplate>
-          <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
-        </ng-template>
-        <ng-template #coverTemplate>
-          <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
-        </ng-template>
-      
-        <ng-template #actionSetting>
-          <i nz-icon nzType="setting"  nzTheme="outline"></i>
-        </ng-template>
-        <ng-template #actionEdit>
-          <i nz-icon nzType="edit"  nzTheme="outline"></i>
-        </ng-template>
-        <ng-template #actionEllipsis>
-          <i nz-icon nzType="ellipsis" nzTheme="outline"></i>
-        </ng-template>
-        </nz-card>
+       
       </div>
     </div>
 
+  </div> -->
+
+  
+<div class="row">
+  <div class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center mb-2 mt-2" *ngFor="let item of data">
+    <div class="" >
+      <nz-card style="width:300px;" [nzCover]="coverTemplate" [nzActions]="[actionSetting, actionEdit, actionEllipsis]" >
+        <nz-card-meta
+          nzTitle="card title"
+          nzDescription="{{item}}"
+          [nzAvatar]="avatarTemplate"
+        ></nz-card-meta>  
+        <ng-template #avatarTemplate>
+        <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+      </ng-template>
+      <ng-template #coverTemplate>
+        <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
+      </ng-template>
+    
+      <ng-template #actionSetting>
+        <i nz-icon nzType="setting"  nzTheme="outline"></i>
+      </ng-template>
+      <ng-template #actionEdit>
+        <i nz-icon nzType="edit"  nzTheme="outline"></i>
+      </ng-template>
+      <ng-template #actionEllipsis>
+        <i nz-icon nzType="ellipsis" nzTheme="outline"></i>
+      </ng-template>
+      </nz-card>
+    </div>
   </div>
+</div>

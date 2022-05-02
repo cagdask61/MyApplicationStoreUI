@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { ApplicationModule } from './application/application.module';
@@ -22,6 +23,7 @@ import { UserModule } from './user/user.module';
     NzCardModule,
     NzAvatarModule,
     NzIconModule,
+
   ],
   exports:[
     CategoryModule
